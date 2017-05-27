@@ -15,7 +15,7 @@
 	</engines>
 
 	<js-module src="www/apsNotification.js" name="apsNotificationPlugin">
-		<clobbers target="plugins.apsNotification" />
+		<clobbers target="cordova.plugins.apsNotification" />
 	</js-module>
 
 	<!-- ios -->
