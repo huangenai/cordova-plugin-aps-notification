@@ -1,6 +1,6 @@
 {
   "name": "cordova_plugin_aps_notification",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "\n\t\tThe plugin can register Aps Push Service,And return Device Token\n\t",
   "cordova": {
     "id": "cordova-plugin-aps-notification",
