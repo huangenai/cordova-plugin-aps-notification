@@ -1,0 +1,31 @@
+{
+  "name": "cordova_plugin_aps_notification",
+  "version": "1.0.0",
+  "description": "\n\t\tThe plugin can register Aps Push Service,And return Device Token\n\t",
+  "cordova": {
+    "id": "cordova-plugin-aps-notification",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cuna/cordova_plugin_aps_notification.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "denglingcong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cuna/cordova_plugin_aps_notification/issues"
+  },
+  "homepage": "https://github.com/Cuna/cordova_plugin_aps_notification#readme"
+}
