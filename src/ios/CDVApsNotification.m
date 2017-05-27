@@ -15,10 +15,11 @@
  * limitations under the License.
  */
 #import "CDVApsNotification.h"
+#import <Cordova/CDVAppDelegate.h>
 
-@interface AppDelegate (apsNotification)
+@interface CDVAppDelegate (apsNotification)
 @end
-@implementation AppDelegate (apsNotification)
+@implementation CDVAppDelegate (apsNotification)
 - (id) getCommandInstance:(NSString*)className
 {
     return [self.viewController getCommandInstance:className];
@@ -29,7 +30,7 @@
 }
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     CDVApsNotification *plugin = [self getCommandInstance:@"ApsNotificationPlugin"];
-    [plugin didFailToRegisterForRemoteNotificationsWithError:deviceToken];
+    [plugin didFailToRegisterForRemoteNotificationsWithError:error];
 }
 @end
 
