@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  id="cordova-plugin-aps-notification"
-  version="1.0.0">
-
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-aps-notification" version="1.0.0" 
+	xmlns="http://www.phonegap.com/ns/plugins/1.0" 
+	xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>ApsNotification</name>
-	 
 	<description>
 		The plugin can register Aps Push Service,And return Device Token
 	</description>
-
 	<engines>
-		<engine name="cordova" version=">=3.0.0" />
+		<engine name="cordova" version="&gt;=3.0.0" />
 	</engines>
-
-	<js-module src="www/apsNotification.js" name="apsNotificationPlugin">
+	<js-module name="apsNotificationPlugin" src="www/apsNotification.js">
 		<clobbers target="cordova.plugins.apsNotification" />
 	</js-module>
-
-	<!-- ios -->
 	<platform name="ios">
-		<config-file target="config.xml" parent="/*">
+		<config-file parent="/*" target="config.xml">
 			<feature name="ApsNotificationPlugin">
-				<param name="ios-package" value="CDVApsNotification"/>
+				<param name="ios-package" value="CDVApsNotification" />
 			</feature>
 		</config-file>
-
 		<header-file src="src/ios/CDVApsNotification.h" />
 		<source-file src="src/ios/CDVApsNotification.m" />
-
+	</platform>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="ApsNotification">
+				<param name="android-package" value="cordova.plugin.aps.notification.ApsNotification" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		<source-file src="src/android/ApsNotification.java" target-dir="src/cordova.plugin.aps.notification/ApsNotification" />
 	</platform>
 </plugin>

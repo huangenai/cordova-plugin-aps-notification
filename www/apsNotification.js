@@ -8,4 +8,10 @@ ApsNotification.prototype.registerRemoteApsNotification = function(success, fail
     return exec(success, fail, "ApsNotificationPlugin", "registerRemoteApsNotification", []);
 };
 
+
+ApsNotification.prototype.notification = function(success, error) {
+    exec(success, error, "ApsNotification", "notification",[]);
+};
+
+
 module.exports = new ApsNotification();
